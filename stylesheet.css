@@ -1,6 +1,8 @@
 
 :root{
     --clr-sustainTag: rgb(166, 247, 166);
+    --clr-lightgray: rgb(225, 225, 225);
+    --clr-gray: rgb(210, 207, 207);
 }
 
 *{
@@ -32,28 +34,33 @@ main{
     align-items: center;
 }
 
+.fa-bars, .fa-xmark{
+    display: none;
+}
+
 #logo{
     width: 200px;
 }
 
-.banner ul{
+.infoAppendix{
     position: absolute;
     list-style: none;
     top: 20px;
     right: 20px;
 }
 
-.banner li{
+.infoAppendix li{
     display: inline-block;
     padding-left: 20px;
 }
 
-.banner li a{
+.infoAppendix li a{
     text-decoration: none;
     color: black;
+    font-size: 1rem;
 }
 
-.banner li::after{
+.infoAppendix li::after{
     content: "";
     width: 0%;
     height: 2px;
@@ -63,7 +70,7 @@ main{
     transition: 0.3s;
 }
 
-.banner li:hover::after{
+.infoAppendix li:hover::after{
     width: 100%;
 }
 
@@ -91,17 +98,17 @@ main{
     list-style: none;
     height: 50px;
     padding: 10px;
-    font-size: 1rem;
     flex: 1 1 auto;
     text-align: center;
     /* border: 2px solid black; */
+    font-size: 1rem;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     border-left: 2px solid black;
 }
 
 .navLi:hover{
-    background-color: rgb(225, 225, 225);
+    background-color: var(--clr-lightgray);
     cursor: pointer;
 }
 
@@ -112,7 +119,7 @@ main{
 
 .discoverDiv{
     padding-top: 20px;
-    background-color: rgb(225, 225, 225);
+    background-color: var(--clr-gray);
     position: absolute;
     left: 0;
     right: 0;
@@ -145,6 +152,10 @@ main{
     background-color: rgb(193, 193, 193);
     transition: 0.3s;
     margin: 0 auto;
+}
+
+.tagDiv:hover .tag{
+    font-style: italic;
 }
 
 .tagDiv:hover .tag::after{
@@ -324,13 +335,66 @@ article{
 
 @media(max-width: 700px){
     html{
-        font-size: 12px;
+        font-size: 13px;
     }
-    
     .navLi{
         padding: 5px;
         font-size: 0.9rem;
     }
+
+    /* <---Info Appendix Div---> */
+
+    .fa-bars{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        transform: scale(1.5);
+        display: block;
+    }
+
+    .infoAppendixDiv{
+        background-color: var(--clr-gray);
+        position: fixed;
+        z-index: 101;
+        right: -200px;
+        top: 0;
+        height: 100vh;
+        width: 30%;
+        transition: 0.5s;
+    }
+
+    .infoAppendix{
+        position: relative;
+        top: 50px;
+        right: 0;
+    }
+
+
+    .infoAppendix li{
+        display: block;
+        padding: 10px;
+    }
+
+    .infoAppendix li:hover{
+        background-color: var(--clr-lightgray);
+    }
+
+    .infoAppendix li:hover::after{
+        width: 0%;
+    }
+
+    .infoAppendix li a{
+        font-size: 1.4rem;
+    }
+
+    .fa-xmark{
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        transform: scale(1.5);
+        display: block;
+    }
+
 
     section, article{
         width: 100%;
@@ -353,7 +417,4 @@ article{
     background-color: red;
     text-align: center;
     z-index: 10;
-
 }
-
-
