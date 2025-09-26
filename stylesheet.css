@@ -322,6 +322,9 @@ article{
 }
 
 @media(max-width: 700px){
+    html{
+        font-size: 12px;
+    }
     section, article{
         width: 100%;
     }    
@@ -343,4 +346,5 @@ article{
     background-color: red;
     text-align: center;
     z-index: 10;
+
 }
