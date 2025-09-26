@@ -34,7 +34,11 @@ main{
     align-items: center;
 }
 
-.fa-bars, .fa-xmark{
+.banner .fa-bars{
+    display: none;
+}
+
+.banner .fa-xmark{
     display: none;
 }
 
@@ -344,12 +348,20 @@ article{
 
     /* <---Info Appendix Div---> */
 
-    .fa-bars{
+    .banner .fa-bars{
         position: absolute;
         right: 20px;
         top: 20px;
         transform: scale(1.5);
         display: block;
+    }
+
+    .banner .fa-xmark{
+        position: absolute;
+        display: block;
+        left: 20px;
+        top: 20px;
+        transform: scale(1.5);
     }
 
     .infoAppendixDiv{
@@ -385,14 +397,6 @@ article{
 
     .infoAppendix li a{
         font-size: 1.4rem;
-    }
-
-    .fa-xmark{
-        position: absolute;
-        left: 20px;
-        top: 20px;
-        transform: scale(1.5);
-        display: block;
     }
 
 
