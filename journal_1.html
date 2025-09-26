@@ -16,10 +16,20 @@
 <body>
     <div class="banner">
         <a href="index.html"><img src="pic/LMS_2.png" id="logo"></a>
-        <ul>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">CONTACT</a></li>
-        </ul>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+
+        <div class="infoAppendixDiv" id="infoAppendixDiv">
+
+            <ul class="infoAppendix">
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>    
+            
+            <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+
+        </div>
+
+
     </div>
     <nav class="navBar">
         <div class="navLst">
@@ -195,5 +205,6 @@
     </div>
 
 </body>
+
 
 </html>
