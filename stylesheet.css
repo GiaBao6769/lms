@@ -91,6 +91,7 @@ main{
     list-style: none;
     height: 50px;
     padding: 10px;
+    font-size: 1rem;
     flex: 1 1 auto;
     text-align: center;
     /* border: 2px solid black; */
@@ -325,6 +326,13 @@ article{
     html{
         font-size: 12px;
     }
+    
+    }
+    .navLi{
+        padding: 5px;
+        font-size: 0.9rem;
+    }
+
     section, article{
         width: 100%;
     }    
@@ -348,3 +356,4 @@ article{
     z-index: 10;
 
 }
+
