@@ -20,10 +20,20 @@
     </header> -->
     <div class="banner">
         <a href="index.html"><img src="pic/LMS_2.png" id="logo"></a>
-        <ul>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">CONTACT</a></li>
-        </ul>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+
+        <div class="infoAppendixDiv" id="infoAppendixDiv">
+
+            <ul class="infoAppendix">
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>    
+            
+            <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+
+        </div>
+
+
     </div>
 
     <nav class="navBar">
@@ -93,7 +103,7 @@
 
 
         <section>
-            <h1 class="title">LATEST ARTICLE</h1>
+            <h1 class="title">LATEST ARTICLES</h1>
             
             <a href="journal_1.html" class="journalLink">
                 <div class="journalTemplate">
@@ -132,7 +142,7 @@
         </section>
         
         <article>
-            <h1>ARTICLE</h1>
+            <h2>FEATURED ARTICLES</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est reiciendis magnam placeat enim distinctio quod. Molestiae vel aliquam blanditiis praesentium molestias ipsum dignissimos consectetur, eos voluptatum, enim, obcaecati perferendis a.</p>
         </article>
 
@@ -144,6 +154,21 @@
         THIS IS FOOTER
     </footer>
 
+    <script>
+        var menu = document.getElementById("infoAppendixDiv")
+        function showMenu(){
+            menu.style.right = "0";
+            
+        }
+
+        function hideMenu(){
+            menu.style.right = "-200px";
+        }
+    </script>
+
 </body>
+
+
+
 
 </html>
