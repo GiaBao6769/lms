@@ -3,6 +3,7 @@
     --clr-sustainTag: rgb(166, 247, 166);
     --clr-lightgray: rgb(225, 225, 225);
     --clr-gray: rgb(210, 207, 207);
+    --border: 1px solid black;
 }
 
 *{
@@ -14,10 +15,17 @@
 
 
 footer{
-    background-color: gray;
+    /* position: relative; */
+    background-color: var(--clr-gray);
     height: auto;
-    text-align: center;
-    height: 1000px;
+    padding: 30px;
+    /* text-align: center; */
+    /* height: 1000px; */
+}
+
+#footerLogo{
+    width: 10rem;
+    max-width: 25vw;
 }
 
 main{
@@ -172,16 +180,16 @@ main{
 
 .mainArticle{
     position: relative;
-    margin-top: 30px;
+    /* margin-top: 30px; */
     margin-bottom: 30px;
     height: 40vh;
-    /* background-color: rgb(198, 198, 198); */
-    background-image: linear-gradient(rgba(79, 79, 79, 0.216), rgba(0, 0, 0, 0.545)), url(pic/temp3.jpg);
+    
+    background-image: linear-gradient(rgba(79, 79, 79, 0.216), rgba(0, 0, 0, 0.545)), url(pic/temp6.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    border-bottom: var(--border);
 
     padding: 10vh 50px 0 50px;
     position: flex;
@@ -190,17 +198,27 @@ main{
     color: white;
 }
 
-#readBtn{
-    position: absolute;
-    bottom: 5vh;
+#mainTitle{
+    font-size: 4rem;
+    display: block;
+}
+
+#mainDescription{
+    font-size: 1.3rem;
+    display: block;
+}
+
+#readBtn {
+    display: inline-block;
+    margin: 2rem auto 0; 
+    padding: 0.5rem 1rem; 
     font-size: 2rem;
     text-decoration: none;
     color: white;
-    border: 2px solid rgb(255, 255, 255);
+    border: 2px solid white;
     background-color: rgba(91, 91, 91, 0.422);
-    transform: translateX(-50%);
-    padding: 8px;
 }
+
 
 #readBtn:hover{
     scale: 1.05;
@@ -318,6 +336,8 @@ article{
     display: flex;
     justify-content: center;
 }
+
+
 .content{
     margin-top: 50px;
     width: 70%;
@@ -326,6 +346,20 @@ article{
     font-size: 1.3rem;
     text-align: justify;
 }
+
+.content h1{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.content h2{
+    text-align: left;
+}
+
+.content p{
+    margin: 10px;
+}
+
 
 .content img{
     width: 100%;
@@ -336,6 +370,37 @@ article{
 .content ul{
     padding-left: 10%;
 }
+
+/* <---ABOUT PAGE---> */
+
+
+.divTemplate{
+    padding: 50px 10% 50px 10%;
+    border-bottom: var(--border);
+}
+
+.membersDiv{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+.memberDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+
+.memberImg{
+    width: clamp(18px, 20rem, 25vw);
+    border-radius: 100%;
+}
+
+.memberName{
+    font-size: 2rem;
+}
+
 
 @media(max-width: 700px){
     html{
@@ -368,7 +433,7 @@ article{
         background-color: var(--clr-gray);
         position: fixed;
         z-index: 101;
-        right: -200px;
+        right: -40vw;
         top: 0;
         height: 100vh;
         width: 30%;
@@ -384,7 +449,7 @@ article{
 
     .infoAppendix li{
         display: block;
-        padding: 10px;
+        padding: 10px 0 10px 30px;
     }
 
     .infoAppendix li:hover{

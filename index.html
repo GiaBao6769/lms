@@ -20,12 +20,13 @@
     </header> -->
     <div class="banner">
         <a href="index.html"><img src="pic/LMS_2.png" id="logo"></a>
+
         <i class="fa-solid fa-bars" onclick="showMenu()"></i>
 
         <div class="infoAppendixDiv" id="infoAppendixDiv">
 
             <ul class="infoAppendix">
-                <li><a href="#">ABOUT</a></li>
+                <li><a href="about.html">ABOUT</a></li>
                 <li><a href="#">CONTACT</a></li>
             </ul>    
             
@@ -92,20 +93,21 @@
         </div>
     </nav>
 
+
     <main>
 
         <div class="mainArticle">
-            <h1 id="mainTitle">MAIN ARTICLE</h1>
-            <p id="mainDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, consequatur odit? Sint neque odit, beatae nesciunt dolorem asperiores nobis quibusdam obcaecati accusantium blanditiis? Dicta nobis aliquam quae. Officiis, dolorum voluptas?</p>
+            <h1 id="mainTitle">WE ARE LMS</h1>
+            <p id="mainDescription">Learn about us and our aims for a sustainable future.</p>
 
-            <a href="#" id="readBtn">READ</a>
+            <a href="main_article.html" id="readBtn">READ</a>
         </div>
 
 
         <section>
             <h1 class="title">LATEST ARTICLES</h1>
             
-            <a href="journal_1.html" class="journalLink">
+            <a href="journalSite/journal_1.html" class="journalLink">
                 <div class="journalTemplate">
                     <img src="journalPic/j1_p1.png" class="journalThumbnail">
                     <div class="journalText">
@@ -124,7 +126,7 @@
                 </div>
             </a>
 
-            <a href="journal_2.html" class="journalLink">
+            <a href="journalSite/journal_2.html" class="journalLink">
                 <div class="journalTemplate">   
                     <img src="journalPic/j2_p1.png" class="journalThumbnail">
                     <div class="journalText">
@@ -151,20 +153,20 @@
     </main>
     
     <footer>
-        THIS IS FOOTER
+        <!-- <img src="pic/LMS_2.png" id="footerLogo">
+        <div>
+            <h1>CONTACT US</h1>
+            <p>Email: </p>
+            <p>Fanpage: </p>
+        
+            <br>
+            <hr>
+            <br>
+            <p>This website is a part of our product in order to attend <i>GREEN STEM INNOVATION</i>.</p>
+        </div> -->
     </footer>
 
-    <script>
-        var menu = document.getElementById("infoAppendixDiv")
-        function showMenu(){
-            menu.style.right = "0";
-            
-        }
-
-        function hideMenu(){
-            menu.style.right = "-200px";
-        }
-    </script>
+    <script src="jvs.js"></script>
 
 </body>
 
