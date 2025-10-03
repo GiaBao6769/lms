@@ -4,6 +4,9 @@
     --clr-lightgray: rgb(225, 225, 225);
     --clr-gray: rgb(210, 207, 207);
     --border: 1px solid black;
+
+    --clr-bg: white;
+    --clr-text: black;
 }
 
 *{
@@ -12,6 +15,12 @@
     margin: 0;
     padding: 0;
 }
+
+.darkmode{
+    --clr-bg: black;
+    --clr-text: white;
+}
+
 
 
 footer{
@@ -119,6 +128,10 @@ main{
     border-left: 2px solid black;
 }
 
+.navLi:first-child{
+    border-left: none;
+}
+
 .navLi:hover{
     background-color: var(--clr-lightgray);
     cursor: pointer;
@@ -201,11 +214,13 @@ main{
 #mainTitle{
     font-size: 4rem;
     display: block;
+    text-shadow: 2px 2px 10px black;
 }
 
 #mainDescription{
     font-size: 1.3rem;
     display: block;
+    text-shadow: 2px 2px 10px black;
 }
 
 #readBtn {
