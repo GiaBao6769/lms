@@ -38,7 +38,8 @@ footer{
 }
 
 main{
-    display: block;
+    width: 100%;
+    min-height: 100vh;
 }
 
 /* <---Banner---> */
@@ -348,13 +349,14 @@ article{
 
 
 /* <---Content---> */
-.journalDiv{
+/* .journalDiv{
     display: flex;
     justify-content: center;
-}
+} */
 
 
 .content{
+    margin: auto;
     margin-top: 50px;
     width: 70%;
     max-width: 1000px;
@@ -502,5 +504,4 @@ article{
     background-color: red;
     text-align: center;
     z-index: 10;
-
 }
