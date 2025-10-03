@@ -323,6 +323,7 @@ article{
     display: flex;
     flex: 1 1 auto;
     justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .journalTag{
@@ -501,4 +502,5 @@ article{
     background-color: red;
     text-align: center;
     z-index: 10;
+
 }
