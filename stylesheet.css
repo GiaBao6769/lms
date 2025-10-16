@@ -7,6 +7,8 @@
 
     --clr-bg: white;
     --clr-text: black;
+    --clr-primitive: rgb(127, 127, 253);
+    /* --clr-light-primitive: rgb(220, 235, 240); */
 }
 
 *{
@@ -21,6 +23,32 @@
     --clr-text: white;
 }
 
+/* <-----Tag Content----> */
+.climateChangeTag::after{
+    content: "Climate Change";
+}
+
+.climateCrisisTag::after{
+    content: "Climate Crisis";
+}
+
+.energyTag::after{
+    content: "Energy";
+}
+
+.innovationsTag::after{
+    content: "Innovations";
+}
+
+
+.sustainabilityTag::after{
+    content: "Sustainability";
+}
+
+
+
+
+/* <-----[\]----- */
 
 
 footer{
@@ -50,6 +78,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background-color: var(--clr-primitive); */
 }
 
 .banner .fa-bars{
@@ -127,6 +156,7 @@ main{
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     border-left: 2px solid black;
+    background-color: var(--clr-light-primitive);
 }
 
 .navLi:first-child{
@@ -180,14 +210,15 @@ main{
     margin: 0 auto;
 }
 
-.tagDiv:hover .tag{
+.tagDiv:hover{
     font-style: italic;
+    background-color: var(--clr-lightgray)
 }
 
-.tagDiv:hover .tag::after{
+/* .tagDiv:hover .tag::after{
     background-color: black;
     width: 40%;
-}
+} */
 
 
 /* <---Main---> */
@@ -335,39 +366,33 @@ article{
     border-radius: 0.5rem;
 }
 
-.sustainTag::after{
-    content: "Sustainability";
-}
 
-.zeroWasteTag::after{
-    content: "Zero Waste"
-}
-
-.climateCrisisTag::after{
-    content: "Climate Crisis";
-}
 
 
 /* <---Content---> */
-/* .journalDiv{
-    display: flex;
-    justify-content: center;
-} */
 
 
-.content{
+.content, .journalHead{
     margin: auto;
     margin-top: 50px;
     width: 70%;
     max-width: 1000px;
     line-height: 1.5;
     font-size: 1.3rem;
+}
+
+.content{
+    margin-bottom: 5rem;
     text-align: justify;
 }
 
-.content h1{
+.journalHead h1{
     text-align: center;
     font-size: 3rem;
+    border-top: var(--border);
+    border-bottom: var(--border);
+    margin-top: 1rem;
+    width: 100%;
 }
 
 .content h2{
@@ -378,6 +403,13 @@ article{
     margin: 10px;
 }
 
+.journalHead{
+    text-align: left;
+}
+
+.journalHead #source a{
+    font-size: 1.1rem;
+}
 
 .content img{
     width: 100%;
@@ -490,9 +522,29 @@ article{
         border: none;
         border-top: 1px solid black;
     }
+
+    .content, .journalHead{
+        width: 90%;
+        font-size: 1.6rem;
+    }
+
+    .journalHead #title{
+        font-size: 3rem;
+    }
     /* .journalDescription{
         display: none;
     } */
+}
+
+@media (max-width: 450px){
+    .content, .journalHead{
+        width: 90%;
+        font-size: 1.4rem;
+    }
+
+    .journalHead #title{
+        font-size: 2.5rem;
+    }
 }
 
 
