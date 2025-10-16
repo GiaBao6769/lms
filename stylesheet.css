@@ -7,8 +7,6 @@
 
     --clr-bg: white;
     --clr-text: black;
-    --clr-primitive: rgb(127, 127, 253);
-    /* --clr-light-primitive: rgb(220, 235, 240); */
 }
 
 *{
@@ -556,4 +554,5 @@ article{
     background-color: red;
     text-align: center;
     z-index: 10;
+
 }
