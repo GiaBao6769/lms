@@ -1,4 +1,3 @@
-
 function showMenu(){
     const menu = document.getElementById("infoAppendixDiv");
     menu.style.right = "0";
@@ -161,5 +160,6 @@ try {
 catch (err) {
     console.error("Error loading file:", err);
 }}
+
 
 loadTemplateElements()
