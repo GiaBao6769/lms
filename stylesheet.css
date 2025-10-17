@@ -7,6 +7,8 @@
 
     --clr-bg: white;
     --clr-text: black;
+    --clr-primitive: rgb(127, 127, 253);
+    /* --clr-light-primitive: rgb(220, 235, 240); */
 }
 
 *{
@@ -300,6 +302,10 @@ article{
     border-bottom: 1px solid black;
 }
 
+article .title{
+    font-size: 2em;
+}
+
 .journalLink{
     color: black;
     text-decoration: none;
@@ -338,12 +344,12 @@ article{
 }
 
 .journalTitle {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     margin: 0;
 }
 
 .journalDescription {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-top: 5px;
     line-height: 1.4;
 }
@@ -365,6 +371,47 @@ article{
 }
 
 
+.featuredJournalTemplate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    border-bottom: 1px solid black;
+    /* overflow: hidden; */
+}
+
+.featuredJournalTemplate:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.featuredJournalTemplate .journalThumbnail{
+    width: min(80%, 40vw);
+    height: auto;
+    margin-left: 10px;
+    aspect-ratio: 1/1;
+    object-fit: cover; 
+    margin-right: 15px;
+    flex-shrink: 0;
+    margin-bottom: 1rem;
+}
+
+.featuredJournalTemplate .journalTitle {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.featuredJournalTemplate .journalDescription {
+    font-size: 1.2rem;
+    margin-top: 5px;
+    line-height: 1.4;
+}
 
 
 /* <---Content---> */
@@ -410,9 +457,11 @@ article{
 }
 
 .content img{
-    width: 100%;
+    width: 80%;
     display: block;
-    margin: auto
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .content ul{
@@ -554,5 +603,4 @@ article{
     background-color: red;
     text-align: center;
     z-index: 10;
-
 }
